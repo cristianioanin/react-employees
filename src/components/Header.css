@@ -1,0 +1,14 @@
+.nav-link {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header h2 {
+  flex-grow: 1;
+}

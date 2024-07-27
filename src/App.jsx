@@ -1,16 +1,18 @@
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import EmployeePage from './pages/EmployeePage';
+
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>React Employees</h1>
-      <button onClick={() => setCount((previousValue) => previousValue + 1)}>
-        Counter value is now: {count}
-      </button>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route index path="home" element={<Home />} />
+        <Route path="employee/:id" element={<EmployeePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
